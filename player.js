@@ -76,11 +76,9 @@ export class Player {
     }
     
     isSelfCollided() {
-        let playerLength = this.positionHistory.length - 1;
-        let headPosition = this.positionHistory[playerLength - 1];
-        for(let playerPosition = 0; playerPosition < playerLength - 2; playerPosition++) {
+        for(let playerPosition = 0; playerPosition < this.getLength() - 2; playerPosition++) {
             let curPlayerPosition = this.positionHistory[playerPosition];
-            if(headPosition.x === curPlayerPosition.x & headPosition.y === curPlayerPosition.y) {
+            if(this.getHead().x === curPlayerPosition.x & this.getHead().y === curPlayerPosition.y) {
                 return true;
             }
         }
