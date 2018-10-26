@@ -86,19 +86,19 @@ export class GameBoard {
     }
 
     resolvePlayerTopBoundaryViolation() {
-        this.player.getHead().y = this.grid.getGridRowSize() - 1;
+        this.player.setHead(new Position(this.player.getHead().x, this.grid.getGridRowSize() -1));
     }
 
     resolvePlayerBottomBoundaryViolation() {
-        this.player.getHead().y %= this.grid.getGridRowSize();
+        this.player.setHead(new Position(this.player.getHead().x, 0));
     }
 
     resolvePlayerLeftBoundaryViolation() {
-        this.player.getHead().x = this.grid.getGridColumnSize() - 1;
+        this.player.setHead(new Position(this.grid.getGridColumnSize() - 1, this.player.getHead().y));
     }
 
     resolvePlayerRightBoundaryViolation() {
-        this.player.getHead().x %= this.grid.getGridColumnSize();
+        this.player.setHead(new Position(0, this.player.getHead().y));
     }
 
     updatePlayerSelfCollision() {
