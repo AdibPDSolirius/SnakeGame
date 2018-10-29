@@ -2,6 +2,11 @@
 
 <h2> Written in pure JavaScript </h2>
 
+<h3>To run</h3>
+<p>
+  In the cloned directory, run npx serve
+</P>
+
 <h3>Brief structure overview</h3>
 <p>
   Game consists of a GameCanvas, GameBoard, Player and Food 
