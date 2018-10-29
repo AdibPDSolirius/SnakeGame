@@ -32,10 +32,21 @@ export class Game {
     }
 
     run(speed) {
+        setInterval(this.updateGame.bind(this), speed*1000);
+    }
+
+    updateGame() {
+        this.updatePlayer();
+        this.updateCanvas();
+    } 
+
+    updatePlayer() {
         this.gameBoard.updatePlayerPosition();
         this.gameBoard.updatePlayerCollision();
+    }
+
+    updateCanvas() {
         this.gameCanvas.render();
-        setTimeout(() => this.run(speed), speed * 1000);
     }
 
 }
