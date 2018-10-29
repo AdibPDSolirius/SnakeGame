@@ -5,6 +5,10 @@
 <h3>To run</h3>
 <p>
   In the cloned directory, run npx serve
+  <br>
+  Go to shown location (http://localhost:5000)
+  <br>
+  Click on 'game.html'
 </P>
 
 <h3>Brief structure overview</h3>
