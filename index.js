@@ -1,4 +1,7 @@
 import { Game } from './game.js';
+import { MEDIUM } from './gameSpeed.js'
+import { Speed } from './gameSpeed.js'
 
 var game = new Game();
-game.run(0.1);
+game.runAtSpeed(MEDIUM);
+//game.runAtSpeed(Speed.MEDIUM);

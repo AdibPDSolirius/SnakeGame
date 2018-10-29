@@ -31,8 +31,8 @@ export class Game {
         }.bind(this);
     }
 
-    run(speed) {
-        setInterval(this.updateGame.bind(this), speed*1000);
+    runAtSpeed(speed) {
+        setInterval(this.updateGame.bind(this), speed);
     }
 
     updateGame() {
